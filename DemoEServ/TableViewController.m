@@ -14,6 +14,7 @@
 
 @interface TableViewController () {
     NSArray *_stations;
+    NSArray *_searchResults;
 }
 
 @end
@@ -61,19 +62,38 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _stations.count;
+    if(tableView == self.searchDisplayController.searchResultsTableView) {
+        return _searchResults.count;
+    } else {
+        return _stations.count;
+    }
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableViewCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"TableViewCell" forIndexPath:indexPath];
     
-    Station *station = [_stations objectAtIndex:indexPath.row];
+    Station *station = nil;
+    if(tableView == self.searchDisplayController.searchResultsTableView) {
+        station = [_searchResults objectAtIndex:indexPath.row];
+    } else {
+        station = [_stations objectAtIndex:indexPath.row];
+    }
+    
     cell.textLabel.text = station.name;
     
     return cell;
 }
 
+#pragma mark UISearchDisplayDelegate
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name contains[cd] %@",searchString];
+    _searchResults = [_stations filteredArrayUsingPredicate:predicate];
+    
+    return YES;
+}
 
 /*
 #pragma mark - Navigation
