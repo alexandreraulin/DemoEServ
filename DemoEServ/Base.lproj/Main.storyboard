@@ -1,7 +1,81 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="z4H-TH-6mY">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Liste-->
+        <scene sceneID="Nxt-SV-8ig">
+            <objects>
+                <tableViewController id="078-ij-osr" customClass="TableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="tka-9Z-G4t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="1gy-W8-l3R">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="078-ij-osr" id="XnG-xS-NjI"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" textLabel="3fg-1B-BOm" style="IBUITableViewCellStyleDefault" id="yTg-iH-35J">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yTg-iH-35J" id="gp8-nx-lfI">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3fg-1B-BOm">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="078-ij-osr" id="Nda-fX-n8W"/>
+                            <outlet property="delegate" destination="078-ij-osr" id="IKT-o5-TGK"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Liste" id="Q6Z-dO-Xwl"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="ftn-AP-g3d" id="MFb-ez-w14"/>
+                        <outlet property="tableView" destination="tka-9Z-G4t" id="geg-Zs-i3j"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Ca-xk-gTT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="ftn-AP-g3d">
+                    <connections>
+                        <outlet property="delegate" destination="078-ij-osr" id="eTJ-GM-mnV"/>
+                        <outlet property="searchBar" destination="1gy-W8-l3R" id="rul-00-oRe"/>
+                        <outlet property="searchContentsController" destination="078-ij-osr" id="yTf-Oy-ogY"/>
+                        <outlet property="searchResultsDataSource" destination="078-ij-osr" id="D8G-67-f65"/>
+                        <outlet property="searchResultsDelegate" destination="078-ij-osr" id="4bP-dK-MGf"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="1827" y="659"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fnv-CT-zAc">
+            <objects>
+                <navigationController id="z4H-TH-6mY" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GDB-pr-o3h">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="078-ij-osr" kind="relationship" relationship="rootViewController" id="ZoQ-9X-eFs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Btb-mH-NgC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1007" y="659"/>
+        </scene>
+    </scenes>
 </document>

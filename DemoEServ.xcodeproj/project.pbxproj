@@ -15,6 +15,8 @@
 		6796544C1A09359E007A1788 /* DemoEServTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6796544B1A09359E007A1788 /* DemoEServTests.m */; };
 		67A6E4621A0A20FD00630802 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A6E4611A0A20FD00630802 /* MapKit.framework */; };
 		67A6E4D31A0A3A8100630802 /* Paris.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 67A6E4D21A0A3A8100630802 /* Paris.gpx */; };
+		AC75806F1A0A7F6C0027CC94 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC75806E1A0A7F6C0027CC94 /* TableViewController.m */; };
+		AC7580721A0A804C0027CC94 /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7580711A0A804C0027CC94 /* Station.m */; };
 		F0B38C6D20980933DC78811D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC824B0752638744311E55CA /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,10 @@
 		67A6E4611A0A20FD00630802 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		67A6E4631A0A241B00630802 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		67A6E4D21A0A3A8100630802 /* Paris.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Paris.gpx; path = ../Paris.gpx; sourceTree = "<group>"; };
+		AC75806D1A0A7F6C0027CC94 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		AC75806E1A0A7F6C0027CC94 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		AC7580701A0A804C0027CC94 /* Station.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Station.h; sourceTree = "<group>"; };
+		AC7580711A0A804C0027CC94 /* Station.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Station.m; sourceTree = "<group>"; };
 		CC824B0752638744311E55CA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD4569573715D9992D414B13 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +98,10 @@
 			isa = PBXGroup;
 			children = (
 				679654391A09359E007A1788 /* Main.storyboard */,
+				AC75806D1A0A7F6C0027CC94 /* TableViewController.h */,
+				AC75806E1A0A7F6C0027CC94 /* TableViewController.m */,
+				AC7580701A0A804C0027CC94 /* Station.h */,
+				AC7580711A0A804C0027CC94 /* Station.m */,
 				6796542F1A09359E007A1788 /* Supporting Files */,
 			);
 			path = DemoEServ;
@@ -289,6 +299,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				679654351A09359E007A1788 /* AppDelegate.m in Sources */,
+				AC75806F1A0A7F6C0027CC94 /* TableViewController.m in Sources */,
+				AC7580721A0A804C0027CC94 /* Station.m in Sources */,
 				679654321A09359E007A1788 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
