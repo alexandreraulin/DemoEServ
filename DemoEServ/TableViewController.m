@@ -11,6 +11,7 @@
 #import "RKResponseDescriptor.h"
 #import "RKObjectRequestOperation.h"
 #import "Station.h"
+#import "DetailViewController.h"
 
 @interface TableViewController () {
     NSArray *_stations;
@@ -95,14 +96,25 @@
     return YES;
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+        NSIndexPath *indexPath = nil;
+        Station *station = nil;
+        
+        if (self.searchDisplayController.active) {
+            indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
+            station = [_searchResults objectAtIndex:indexPath.row];
+        } else {
+            indexPath = [self.tableView indexPathForSelectedRow];
+            station = [_stations objectAtIndex:indexPath.row];
+        }
+        
+        [(DetailViewController *)[segue destinationViewController] setStation:station];
+    }
 }
-*/
 
 @end

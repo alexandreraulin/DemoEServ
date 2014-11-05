@@ -17,6 +17,7 @@
 		67A6E4D31A0A3A8100630802 /* Paris.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 67A6E4D21A0A3A8100630802 /* Paris.gpx */; };
 		AC7580641A0A5E590027CC94 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7580631A0A5E590027CC94 /* TableViewController.m */; };
 		AC7580671A0A617A0027CC94 /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7580661A0A617A0027CC94 /* Station.m */; };
+		AC75806A1A0A67680027CC94 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7580691A0A67680027CC94 /* DetailViewController.m */; };
 		F0B38C6D20980933DC78811D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC824B0752638744311E55CA /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,8 @@
 		AC7580631A0A5E590027CC94 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		AC7580651A0A617A0027CC94 /* Station.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Station.h; sourceTree = "<group>"; };
 		AC7580661A0A617A0027CC94 /* Station.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Station.m; sourceTree = "<group>"; };
+		AC7580681A0A67680027CC94 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		AC7580691A0A67680027CC94 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		CC824B0752638744311E55CA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD4569573715D9992D414B13 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +103,8 @@
 				679654391A09359E007A1788 /* Main.storyboard */,
 				AC7580621A0A5E590027CC94 /* TableViewController.h */,
 				AC7580631A0A5E590027CC94 /* TableViewController.m */,
+				AC7580681A0A67680027CC94 /* DetailViewController.h */,
+				AC7580691A0A67680027CC94 /* DetailViewController.m */,
 				AC7580651A0A617A0027CC94 /* Station.h */,
 				AC7580661A0A617A0027CC94 /* Station.m */,
 				6796542F1A09359E007A1788 /* Supporting Files */,
@@ -298,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC75806A1A0A67680027CC94 /* DetailViewController.m in Sources */,
 				679654351A09359E007A1788 /* AppDelegate.m in Sources */,
 				AC7580641A0A5E590027CC94 /* TableViewController.m in Sources */,
 				AC7580671A0A617A0027CC94 /* Station.m in Sources */,
