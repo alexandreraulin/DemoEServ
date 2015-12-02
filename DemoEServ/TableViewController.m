@@ -44,7 +44,7 @@
     RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:mapping method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:nil];
     
     //NSURL *url = [NSURL URLWithString:@"http://vlille.fr/stations/xml-stations.aspx"];
-    NSURL *url = [NSURL URLWithString:@"https://api.jcdecaux.com/vls/v1/stations?contract=Paris&apiKey=3c849e738c6313e548d95101ac6e35cf707f840f"];
+    NSURL *url = [NSURL URLWithString:@"https://api.jcdecaux.com/vls/v1/stations?contract=Paris&apiKey="];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
     RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[responseDescriptor]];
